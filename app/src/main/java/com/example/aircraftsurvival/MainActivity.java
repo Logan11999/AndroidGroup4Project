@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //connects to log in screen
+    //public void loginClick(View v){
+    //}
+
     //connects new game button to game activity
     public void newClick(View v){
         Intent intent = new Intent(MainActivity.this, GameActivity.class);
