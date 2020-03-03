@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     //connects new game button to game activity
     public void newClick(View v){
-        Intent intent = new Intent(MainActivity.this, GameActivity.class);
+        Intent intent = new Intent(MainActivity.this, activity_instruction.class);
         startActivity(intent);
     }
 
