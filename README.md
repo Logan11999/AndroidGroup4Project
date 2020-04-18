@@ -1,6 +1,9 @@
 # AndroidGroup4Project
 
-### team member 
+### Team member 
 - Logan Smith
 - Xizi Chen
 - Chapagain,Aashutosh
+
+
+### Application information
