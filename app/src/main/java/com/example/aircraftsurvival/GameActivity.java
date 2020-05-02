@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Point;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 public class GameActivity extends AppCompatActivity {
     private GameView gameView;
@@ -11,6 +12,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_game);
 
         Point point = new Point();
