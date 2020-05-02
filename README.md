@@ -7,3 +7,4 @@
 
 
 ### Application information
+All you need to do is clone the repository and open it with Android Studio.
