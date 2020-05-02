@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     public void loadlick(View v){
         Intent intent = new Intent(MainActivity.this, GameActivity.class);
         startActivity(intent);
+
     }
 
     //connects leaderboards button to leaderboards activity
