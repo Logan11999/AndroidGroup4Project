@@ -18,7 +18,8 @@
             android:theme="@style/AppTheme.noActionBar"
             android:screenOrientation="landscape"/>
         <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.noActionBar">
+            android:theme="@style/AppTheme.noActionBar"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

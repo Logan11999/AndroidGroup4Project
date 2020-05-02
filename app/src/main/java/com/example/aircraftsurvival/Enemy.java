@@ -12,7 +12,7 @@ public class Enemy {
     public int speed = 20;
     public boolean wasshot = true;
     int x,y,width,height;
-    Bitmap enemy;
+    Bitmap enemy,destoried;
 
     Enemy(Resources res){
         enemy = BitmapFactory.decodeResource(res,R.drawable.enemy);
@@ -28,6 +28,9 @@ public class Enemy {
 
         y = -height;
 
+        destoried = BitmapFactory.decodeResource(res,R.drawable.destoried);
+        destoried = Bitmap.createScaledBitmap(destoried,width,height,false);
+
     }
 
     Bitmap getEnemy(){
@@ -36,5 +39,9 @@ public class Enemy {
 
     Rect getCollision(){
         return new Rect(x,y,x+width,y+height);
+    }
+
+    Bitmap getCrashed(){
+        return destoried;
     }
 }

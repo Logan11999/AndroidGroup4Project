@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +21,20 @@ public class MainActivity extends AppCompatActivity {
 
         //fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        //read local highscore
+        SharedPreferences prefs = getSharedPreferences("game",MODE_PRIVATE);
+        TextView textView = findViewById(R.id.nameTV);
+        textView.setText("Your Highscore is "+ prefs.getInt("highscore",0));
+
+        Button exit = findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
+            }
+        });
     }
     //connects to log in dialogue
     public void loginClick(View v) {
